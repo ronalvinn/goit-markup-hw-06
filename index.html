@@ -375,13 +375,15 @@
         </div>
       </div>
         <form class="subscribe">Subscribe       
-          <input class="footer-subscribe" type="text" name="email" placeholder="E-mail">
+          <input class="footer-subscribe" type="text" name="email" placeholder="E-mail" required>
+          <button class="subscribe-button" type="submit">Subscribe
+            <svg class="submit-button-svg">
+              <use href="./images/icons/modal.svg#subscribe"></use>
+            </svg>
+            </button>
         </form>
         
-        <button class="subscribe-button" type="submit">Subscribe
-        <svg class="submit-button-svg">
-          <use href="./images/icons/modal.svg#subscribe"></use>
-        </svg>
+        
         </button>
 
     </div>
@@ -394,21 +396,21 @@
         <form class="user-info">
           <label class="form-label" for="name">
           <span class="user-contact-label">Name</span>
-            <input class="label-input" type="text" name="full_name">
+            <input class="label-input" type="text" name="full_name" required>
             <svg class="user-icon">
               <use href="./images/icons/modal.svg#name-icon"></use>
             </svg>
           </label>
           <label class="form-label" for="phone">
            <span class="user-contact-label">Phone</span>
-            <input class="label-input" type="tel" name="phone">
+            <input class="label-input" type="tel" name="phone" required>
             <svg class="user-icon">
               <use href="./images/icons/modal.svg#phone"></use>
             </svg>
           </label>
           <label class="form-label" for="email">
             <span class="user-contact-label">Email</span>
-            <input class="label-input" type="text" name="email">
+            <input class="label-input" type="text" name="email" required>
             <svg class="user-icon">
               <use href="./images/icons/modal.svg#mail"></use>
             </svg>
@@ -430,12 +432,12 @@
               </span>
           </label>
             <input class="send-button" type="submit" value="Send">
+            <button class="modal-close" data-modal-close>
+              <svg class="close-svg">
+               <use href="./images/close.svg#close">
+              </svg> 
+           </button>
         </form>
-        <button class="modal-close" data-modal-close>
-          <svg class="close-svg">
-           <use href="./images/close.svg#close">
-          </svg> 
-       </button>
       </div>
       
     </div>

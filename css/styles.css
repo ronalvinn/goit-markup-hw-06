@@ -603,7 +603,6 @@ ul {
 
 .modal-content {
     position: relative;
-    height: 583px;
     width: 408px;
     border-radius: 4px;
     padding: 72px 24px 24px 24px;
@@ -624,11 +623,9 @@ ul {
     border: 1px solid rgba(0, 0, 0, 0.10);
     border-radius: 40px;
     background-color: var(--cornflower);
-    margin-top: 24px;
-    margin-right: 24px;
     position: absolute;
-    left: 90%;
-    top: 0%;
+    right: 24px;
+    top: 24px;
     fill: var(--navyblue);
     transition: var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -643,11 +640,12 @@ ul {
     cursor: pointer;
     background-color: var(--ocean);
     border-color: var(--ocean);
-    stroke: var(--cloud);
+    fill: var(--cloud);
 }
 
 .form-label {
     display: block;
+    margin-top: 5px;
 }
 
 
@@ -657,6 +655,7 @@ ul {
     height: 40px;
     flex-shrink: 0;
     border-radius: 4px;
+    transition: var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .checkbox {
@@ -677,20 +676,19 @@ ul {
 
 .user-info input {
     display: block;
-    margin-top: 8px;
+    margin-top: 5px;
+
 }
 
 .label-input:focus,
-textarea:focus {
+textarea:focus, .label-input:hover,
+textarea:hover  {
     border-color: var(--iris);
     outline: 0;
 }
 
-.user-icon {
-    fill: var(--navyblue);
-}
 
-.label-input:focus + .user-icon use {
+.label-input:focus + .user-icon use, .label-input:hover + .user-icon use {
     fill: var(--iris);
 }
 
@@ -705,6 +703,8 @@ textarea:focus {
     font-size: 12px;
     letter-spacing: 0.48px;
     border-radius: 4px;
+    resize: none;
+    transition: var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label-input, textarea {
@@ -716,15 +716,21 @@ textarea:focus {
 
 .checkbox-text {
     color: var(--lightslate);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; 
+    letter-spacing: 0.48px;
+    margin-bottom: 24px;
+
 }
 
 .checkbox-icon {
     width: 16px;
-    height: 14px;
+    height: 15px;
     border: 1px solid var(--lightslate);
     border-radius: 2px;
-    padding: 1px;
-    margin-top: 3px;
+    padding: 2px;
     margin-right: 7px;
     fill: currentColor;
     background-color: var(--white);
@@ -778,6 +784,7 @@ transition: var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 16px;
     line-height: 24px; 
     letter-spacing: 0.32px;
+    margin-bottom: 10px;
 }
 
 .user-contact-label {
@@ -789,12 +796,14 @@ transition: var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .user-icon {
+    fill: var(--navyblue);
     height: 18px;
     width: 18px;
     position: absolute;
     left: 12px;
     margin-top: -30px;
     margin-left: 25px;
+    transition: var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .privacy-policy {
@@ -838,15 +847,24 @@ transition: var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
     outline: 0px;
  }
 
+ .subscribe input[type="text"] {
+    color: var(--white);
+  }
+
  .subscribe {
     color: var(--white);
-    margin-left: 70px;
+    margin-left: 88px;
+    display: flex;
+    flex-direction: column;
  }
 
- .subscribe-button{
-    margin-left: -96px;
-    margin-top: 28px;
- }
+  .subscribe-button {
+    position: absolute;
+    left: 1157px;
+    margin-top: 35px;
+    height: 40px;
+    width: 165px;
+ } 
 
  .subscribe-button:hover {
     background-color: var(--ocean);
